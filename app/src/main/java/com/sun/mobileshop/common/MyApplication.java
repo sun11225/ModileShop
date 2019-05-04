@@ -20,7 +20,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        mContext=getApplicationContext();
         //应用到全局配置 获取实例
         GreenDaoManager.getmInstance();
         HttpMethods.getmInstance();

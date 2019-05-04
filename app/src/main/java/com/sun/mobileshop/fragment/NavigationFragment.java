@@ -18,7 +18,7 @@ import com.sun.mobileshop.R;
  * Created by Administrator on 2019/5/3 0003.
  */
 
-public class NavigationFragment extends Fragment implements View.OnClickListener {
+public class NavigationFragment extends BaseFragment implements View.OnClickListener {
 
     private LinearLayout tabItemHome;
     private LinearLayout tabItemCategory;

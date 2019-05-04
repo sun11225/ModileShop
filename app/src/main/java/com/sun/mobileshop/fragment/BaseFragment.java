@@ -7,17 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sun.mobileshop.R;
-
 /**
- * Created by Administrator on 2019/5/3 0003.
+ * Created by Administrator on 2019/5/4 0004.
  */
 
-public class CartFragment extends BaseFragment {
+public class BaseFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_cart,container,false);
-        return view;
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 }

@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 
 import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
+import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -27,11 +29,11 @@ public class ImageLoaderManager {
 
 
     //单例模式
-    public static ImageLoaderManager getmInstance(){
-        if (mInstance==null){
-            synchronized (ImageLoaderManager.class){
-                if (mInstance==null){
-                    mInstance=new ImageLoaderManager();
+    public static ImageLoaderManager getmInstance() {
+        if (mInstance == null) {
+            synchronized (ImageLoaderManager.class) {
+                if (mInstance == null) {
+                    mInstance = new ImageLoaderManager();
                 }
             }
         }
@@ -39,14 +41,14 @@ public class ImageLoaderManager {
     }
 
     //全局配置
-    public ImageLoaderManager(){
+    public ImageLoaderManager() {
 
-        if (mInstance==null){
+        if (mInstance == null) {
             //采用自定义配置
-            ImageLoader.getInstance().init(customImageLoaderConfig((MyApplication.getContext())));
+           // ImageLoader.getInstance().init(customImageLoaderConfig((MyApplication.getContext())));
 
             //采用默认配置
-            //ImageLoader.getInstance().init(defaultImageLoaderConfig());
+            ImageLoader.getInstance().init(defaultImageLoaderConfig());
         }
     }
 
