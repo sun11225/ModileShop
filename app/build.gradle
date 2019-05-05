@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'android-apt'
 
 
 android {
@@ -54,6 +55,10 @@ dependencies {
 
     //图片处理
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //butterKnife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
 
 
 

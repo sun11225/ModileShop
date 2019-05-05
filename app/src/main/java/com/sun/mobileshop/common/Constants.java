@@ -8,7 +8,7 @@ public class Constants {
     /**
      *Base url
      */
-    public static String BASE_URL="http://192.168.1.82:8080/MobileShop/";
+    public static String BASE_URL="http://192.168.1.71:8080/MobileShop/";
     /**
      * 广告url
      */

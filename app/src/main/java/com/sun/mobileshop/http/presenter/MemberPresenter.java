@@ -1,5 +1,6 @@
 package com.sun.mobileshop.http.presenter;
 
+import com.sun.mobileshop.entity.HttpResult;
 import com.sun.mobileshop.entity.MemberEntity;
 import com.sun.mobileshop.http.HttpMethods;
 
@@ -24,6 +25,18 @@ public class MemberPresenter extends HttpMethods {
         Observable observable=memberService.login(userName,password)
                 .map(new HttpResultFunc<MemberEntity>());
         toSubscribe(observable,subscriber);
+    }
+
+    //修改密码
+    public static void changePassword(Subscriber subscriber, String memberId, String old_pwd, String new_pwd){
+        Observable observable=memberService.changePassword(memberId,old_pwd,new_pwd);
+        toSubscribe(observable,subscriber);
+    }
+
+    //找回密码,修改成功或失败后的data数据为null
+    public static void findPassword(Subscriber subscriber, String email) {
+        Observable observable = memberService.findPassword(email);
+        toSubscribe(observable, subscriber);
     }
 
 }

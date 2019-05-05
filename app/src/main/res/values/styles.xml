@@ -29,4 +29,21 @@
         <item name="android:clickable">false</item>
     </style>
 
+    <style name="common_layout_title">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/common_title_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="line2">
+        <item name="android:background">#ffcccccc</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0px</item>
+    </style>
+
+    <style name="my_personal_list_height">
+        <item name="android:layout_height">49.0dip</item>
+    </style>
+
 </resources>

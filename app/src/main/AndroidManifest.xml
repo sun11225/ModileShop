@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sun.mobileshop">
+    <permission
+        android:name="ictuniv.permission.SHOPPINGCART_ADD"
+        android:protectionLevel="normal" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -26,10 +29,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".activity.BaseActivity" />
-        <activity android:name=".activity.AdActivity"></activity>
+        <activity android:name=".activity.AdActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.MyOrderActivity" />
+        <activity android:name=".activity.MyFavoriteActivity" />
+        <activity android:name=".activity.AddressActivity" />
+        <activity android:name=".activity.ChangePWDActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.FindPWDActivity"></activity>
     </application>
 
 </manifest>

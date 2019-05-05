@@ -33,9 +33,9 @@ public abstract class ProgressDialogSubscriber<T> extends Subscriber<T> {
     @Override
     public void onError(Throwable e) {
         if (e instanceof SocketTimeoutException){
-            Toast.makeText(mContext,"网络中断，请检查您的网络状态",Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext,"服务器响应的超时!",Toast.LENGTH_SHORT).show();
         }else if (e instanceof ConnectException){
-            Toast.makeText(mContext,"网络中断，请检查您的网络状态",Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext,"服务器请求超时!",Toast.LENGTH_SHORT).show();
         }else {
             Toast.makeText(mContext,"error: "+e.getMessage(),Toast.LENGTH_SHORT).show();
 

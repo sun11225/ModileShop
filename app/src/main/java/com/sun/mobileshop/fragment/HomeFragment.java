@@ -141,9 +141,7 @@ public class HomeFragment extends BaseFragment {
             }
         });
         //加载Url
-        mWebView.loadUrl("https://www.jd.com/?cu=true&utm_source=baidu-pinzhuan&utm_me" +
-                "dium=cpc&utm_campaign=t_288551095_baidupinzhuan&utm_" +
-                "term=0f3d30c8dba7459bb52f2eb5eba8ac7d_0_e01829678c98415db22bfb876f376877");
+        mWebView.loadUrl("http://www.apple.com/cn-k12/shop");
     }
 
 
@@ -163,6 +161,7 @@ public class HomeFragment extends BaseFragment {
             public void onRefresh() {
                 //有网络才刷新
                 if (NetworkUtils.isNetWorkAvailable(mainActivity)){
+                    //重新加载
                     mWebView.reload();
                 }else {
                     mSwipeRefreshLayout.setRefreshing(false);
