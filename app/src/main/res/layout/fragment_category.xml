@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
-    <TextView
-        android:gravity="center"
+    <!--搜索栏-->
+    <RelativeLayout
+        android:id="@+id/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/common_title_2"
+            layout="@layout/common_header" />
+    </RelativeLayout>
+
+    <!--二级列表-->
+    <LinearLayout
+        android:id="@+id/mainlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:text="分类"></TextView>
+        android:orientation="horizontal">
+
+        <!--左侧列表-->
+        <!--滚动时，重绘View的时候就不会有背景颜色。-->
+        <!--当你不使用android:cacheColorHint=“#00000000”会出现下面选
+        中一个空间黑色底色的情况，破坏整体美观度：-->
+        <!--不想显示分割线则只要设置为android:divider="@drawable/@null" -->
+        <!--scrollbars属性，作用是隐藏listView的滚动条-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/left_list"
+            android:layout_width="@dimen/category_list_left_width"
+            android:layout_height="match_parent"
+            android:background="@color/category_left_bg_color"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="none">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <!--右侧列表-->
+        <!--把图片设置为不可获取焦点，也就是android:focusable="false"-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/right_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:focusable="false"
+            android:listSelector="#00000000"
+            android:paddingLeft="@dimen/category_list_right_padding"
+            android:paddingRight="@dimen/category_list_right_padding"
+            android:paddingTop="@dimen/category_list_right_padding"
+            android:scrollbars="none">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
 </LinearLayout>

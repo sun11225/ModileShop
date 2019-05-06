@@ -2,13 +2,14 @@ package com.sun.mobileshop.common;
 
 /**
  * Created by Administrator on 2019/5/4 0004.
+ * 恒定的数据
  */
 
 public class Constants {
     /**
      *Base url
      */
-    public static String BASE_URL="http://192.168.1.71:8080/MobileShop/";
+    public static String BASE_URL="http://172.56.2.138:8080/MobileShop/";
     /**
      * 广告url
      */
@@ -20,4 +21,9 @@ public class Constants {
      * 广告显示时长 ，单位：ms
      */
     public static int AD_TIME_SECOND = 3000;
+
+    /**
+     * 列表页面右侧列表的列数
+     */
+    public static int SPAN_COUNT = 3;
 }

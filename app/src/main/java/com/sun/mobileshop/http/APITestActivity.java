@@ -62,7 +62,7 @@ public class APITestActivity extends AppCompatActivity {
             public void onNext(MemberEntity memberEntity) {
                 Toast.makeText(APITestActivity.this, "member:" + memberEntity.toString(), Toast.LENGTH_SHORT).show();
             }
-        }, "user2018", "suer2018@qq.com", "122222");
+        }, "user2018", "user2018@qq.com", "122222");
        MemberPresenter.register(new Subscriber<MemberEntity>() {
             @Override
             public void onCompleted() {

@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.sun.mobileshop.common.Constants;
 import com.sun.mobileshop.entity.HttpResult;
+import com.sun.mobileshop.http.service.CategoryService;
 import com.sun.mobileshop.http.service.MemberService;
 
 import java.util.concurrent.TimeUnit;
@@ -33,6 +34,7 @@ public class HttpMethods {
     //配置 获取实例
     private static HttpMethods mInstance;
     protected static MemberService memberService;
+    public static CategoryService categoryService;
 
 
     //构造器
@@ -52,6 +54,8 @@ public class HttpMethods {
 
             //创建MemberService代理对象 获取实例
             memberService = retrofit.create(MemberService.class);
+
+            categoryService=retrofit.create(CategoryService.class);
         }
 
     }

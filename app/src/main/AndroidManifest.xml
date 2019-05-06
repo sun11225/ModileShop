@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sun.mobileshop">
+
     <permission
         android:name="ictuniv.permission.SHOPPINGCART_ADD"
         android:protectionLevel="normal" />
@@ -40,7 +41,8 @@
         <activity android:name=".activity.AddressActivity" />
         <activity android:name=".activity.ChangePWDActivity" />
         <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".activity.FindPWDActivity"></activity>
+        <activity android:name=".activity.FindPWDActivity" />
+        <activity android:name=".activity.GoodsListActivity"></activity>
     </application>
 
 </manifest>

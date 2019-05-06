@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/category_item_list_have_picture_ll_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- fitCenter  把图片按比例扩大/缩小到View的宽度，居中显示-->
+    <ImageView
+        android:id="@+id/category_item_list_have_picture_image_1"
+        android:layout_width="match_parent"
+        android:paddingTop="9dp"
+        android:paddingRight="9dp"
+        android:scaleType="fitCenter"
+        android:layout_height="@dimen/category_list_right_image_width" />
+
+    <!--maxEms 限制textview一行所占屏幕的宽度-->
+    <TextView
+        android:id="@+id/category_item_list_have_picture_text_1"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:maxEms="6"
+        android:gravity="center_horizontal"
+        android:textColor="@color/category_right_item_font"
+        android:textSize="@dimen/category_new_level3_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+</LinearLayout>
