@@ -42,7 +42,8 @@
         <activity android:name=".activity.ChangePWDActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.FindPWDActivity" />
-        <activity android:name=".activity.GoodsListActivity"></activity>
+        <activity android:name=".activity.GoodsListActivity" />
+        <activity android:name=".activity.SearchActivity"></activity>
     </application>
 
 </manifest>

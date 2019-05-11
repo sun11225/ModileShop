@@ -5,6 +5,7 @@ import android.util.Log;
 import com.sun.mobileshop.common.Constants;
 import com.sun.mobileshop.entity.HttpResult;
 import com.sun.mobileshop.http.service.CategoryService;
+import com.sun.mobileshop.http.service.GoodsService;
 import com.sun.mobileshop.http.service.MemberService;
 
 import java.util.concurrent.TimeUnit;
@@ -35,6 +36,7 @@ public class HttpMethods {
     private static HttpMethods mInstance;
     protected static MemberService memberService;
     public static CategoryService categoryService;
+    public static GoodsService goodsService;
 
 
     //构造器
@@ -43,6 +45,8 @@ public class HttpMethods {
         if (mInstance == null) {
             OkHttpClient client = new OkHttpClient.Builder()
                     .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
+                    .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
+                    .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                     .build();
 
             retrofit = new Retrofit.Builder()
@@ -56,6 +60,8 @@ public class HttpMethods {
             memberService = retrofit.create(MemberService.class);
 
             categoryService=retrofit.create(CategoryService.class);
+
+            goodsService=retrofit.create(GoodsService.class);
         }
 
     }

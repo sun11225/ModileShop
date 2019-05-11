@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="14dp"
+    android:paddingTop="14dp">
+
+    <!--商品图片-->
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:id="@+id/goodslist_img"
+        android:src="@drawable/sample_ad"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+    <!--商品名称-->
+    <TextView
+        android:layout_toRightOf="@id/goodslist_img"
+        android:id="@+id/goodlists_name"
+        android:text="正宗河北迁西板栗仁"
+        android:textColor="@color/dark"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignTop="@id/goodslist_img"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--商品价格-->
+    <TextView
+        android:layout_marginTop="15dp"
+        android:text="$30"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:id="@+id/goodslist_price"
+        android:layout_below="@id/goodlists_name"
+        android:layout_alignLeft="@id/goodlists_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--商品评论数-->
+    <TextView
+        android:layout_marginTop="6dp"
+        android:id="@+id/goodslist_comments"
+        android:text="0人已购买"
+        android:textColor="@color/light"
+        android:textSize="14dp"
+        android:layout_alignLeft="@id/goodslist_price"
+        android:layout_below="@id/goodslist_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--其他属性-->
+    <TextView
+        android:text="特价商品"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:id="@+id/goodslist_goodstype"
+        android:layout_toRightOf="@id/goodslist_comments"
+        android:layout_below="@id/goodslist_price"
+        android:layout_marginLeft="12dp"
+        android:background="@color/red"
+        android:layout_marginTop="6dp"
+        android:paddingRight="3dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

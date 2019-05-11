@@ -104,6 +104,7 @@ public class CategoryLeftListAdapter extends RecyclerView.Adapter<RecyclerView.V
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category_list_left,parent,false);
         ViewHolder holder=new ViewHolder(view);
 
+        //监听
         view.setOnClickListener(this);
         return holder;
     }

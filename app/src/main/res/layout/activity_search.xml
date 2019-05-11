@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/common_header2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/product_list_search_float_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/header"
+        android:background="@color/search_hotword_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10.0dip">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="34.0dip"
+            android:background="@color/search_hotword_bg"
+            android:gravity="center|left"
+            android:text="历史搜索"
+            android:textColor="@color/search_hotword_hint"
+            android:textSize="16.0sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/search_hotword_divider" />
+
+        <!--divider分割线-->
+        <!-- android:focusableInTouchMode  通过触摸获取焦点-->
+        <!--listSelector 对应 view的 不同点击状态 展现出 相对应的 样式-->
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/search_history_list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:focusableInTouchMode="false"
+            android:listSelector="@android:color/transparent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/del_history_button"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/button_c"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="@string/del_search_history"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/del_search_history_textcolor"/>
+
+    </LinearLayout>
+</RelativeLayout>

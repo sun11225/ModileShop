@@ -103,6 +103,8 @@ public class CategoryRightListAdapter extends RecyclerView.Adapter<RecyclerView.
         return mRightData.size();
     }
 
+
+
     //初始化操作 点击事件等等
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -117,7 +119,7 @@ public class CategoryRightListAdapter extends RecyclerView.Adapter<RecyclerView.
         //获取手机屏幕宽度
         int width= DesityUtils.getWidth(mContext);
 
-        //设置右侧列表每个选项的高宽度  params参数
+        //设置右侧列表每个选项的高宽度
         LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(
                 (width-left_width)/3,
                 ViewGroup.LayoutParams.WRAP_CONTENT
